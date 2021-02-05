@@ -1,4 +1,4 @@
-export const SuperArray = (...itens) => {
+export const SuperArray = (itens = []) => {
 
   const array = {
     /**
