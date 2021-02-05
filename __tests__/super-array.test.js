@@ -3,6 +3,6 @@ import { SuperArray } from '../src/super-array'
 
 describe('Exemplo de testes', () => {
   it('Valor importado deve ser true', () => {
-    expect(exemplo).toBeTruthy()
+    expect(true).toBeTruthy()
   })
 })
