@@ -32,7 +32,7 @@ Retorno: `void`
 
 ```js
 // Utilização
-const meuArrayComHeMan = SuperArray(1, 2, 3)
+const meuArrayComHeMan = SuperArray([1, 2, 3])
 meuArrayComHeMan.push("He Man")
 
 // meuArrayComHeMan.itens será [1, 2, 3, 'He Man']
@@ -69,7 +69,7 @@ Retorno: `SuperArray com itens filtrados`
 
 ```js
 // Utilização
-const meuArray = SuperArray(1, 2, 3)
+const meuArray = SuperArray([1, 2, 3])
 
 const meuArrayImpares = meuArray.filter(item => {
   return item % 2 !== 0
@@ -90,7 +90,7 @@ Retorno: `SuperArray com itens mapeados`
 
 ```js
 // Utilização
-const meuArray = SuperArray(1, 2, 3)
+const meuArray = SuperArray([1, 2, 3])
 
 const meuArrayDobrado = meuArray.map(item => {
   return item * 2
@@ -111,7 +111,7 @@ Retorno: `Item encontrado ou undefined`
 
 ```js
 // Utilização
-const meuArray = SuperArray(1, 2, 3)
+const meuArray = SuperArray([1, 2, 3])
 
 const primeiroNumeroMarioQue1 = meuArray.find(item => {
   return item > 1
@@ -134,7 +134,7 @@ Retorno: `Um único valor de qualquer tipo (string, number, boolean, objeto, etc
 
 ```js
 // Utilização
-const meuArray = SuperArray(1, 2, 3)
+const meuArray = SuperArray([1, 2, 3])
 
 const somaMeuArray = meuArray.reduce((acumulador, item) => {
   return acumulador += item
