@@ -1,65 +1,54 @@
 export const SuperArray = (itens = []) => {
-
   const array = {
-    /**
-     * Propriedade para acessar os itens
-     */
-
     itens: [...itens],
-  }
+  };
 
-  /**
-   * Adicionar um novo item ao final dos items
-   */
+  array.push = (item) => {
+    array.itens[itens.length] = item;
+  };
 
-  array.push = item => {
-    return null
-  }
+  array.forEach = (callback) => {
+    for (let i = 0; i < array.itens.length; i++) {
+      callback(array.itens[i], i);
+    }
+  };
 
-  /**
-   * Itera sobre cada um dos elementos do SuperArray enviando o item e o index
-   * como segundo parametro
-   */
+  array.map = (callback) => {
+    let novoArray = [];
+    for (let i = 0; i < array.itens.length; i++) {
+      novoArray[i] = callback(array.itens[i]);
+    }
+    return novoArray;
+  };
 
-  array.forEach = callback => {
-    return null
-  }
+  array.filter = (callback) => {
+    let novoArray = [];
+    let j = 0;
+    for (let i = 0; i < array.itens.length; i++) {
+      if (callback(array.itens[i]) === true) {
+        novoArray[j] = array.itens[i];
+        j++;
+      }
+    }
+    return novoArray;
+  };
 
-  /**
-   * Retorna um novo SuperArray com os itens mapeados
-   */
-
-  array.map = callback => {
-    return null
-  }
-
-
-  /**
-   * Retorna um SuperArray novo com os itens filtrados
-   */
-
-  array.filter = callback => {
-    return null
-  }
-
-
-  /**
-   * Retorna o primeiro elemento do SuperArray que satisfazer o callback recebido
-   * se não encontrar, deve retornar undefined
-   */
-
-  array.find = callback => {
-    return null
-  }
-
-  /**
-   * Reduz o SuperArray em um único valor
-   */
-
+  array.find = (callback) => {
+    for (let i = 0; i < array.itens.length; i++) {
+      if (callback(array.itens[i]) === true) {
+        return array.itens[i];
+      }
+    }
+  };
 
   array.reduce = (callback, valorInicial) => {
-    return null
-  }
+    let soma = valorInicial;
+    for (let i = 0; i < array.itens.length; i++) {
+      soma += callback(array.itens[i]);
+    }
 
-  return array
-}
+    return soma;
+  };
+
+  return array;
+};
