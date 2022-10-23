@@ -1,3 +1,5 @@
+![image](https://user-images.githubusercontent.com/101672271/197370063-6485ceb7-6fd3-49e9-afd1-dfbefbc0333f.png)
+
 # super-array-js
 
 Vamos criar um tipo de estrutura de dados que irá ter alguns métodos para facilitar a manipulação de arrays.
